@@ -41,20 +41,31 @@
 
 using System.Reflection.Metadata.Ecma335;
 
-for (int i = 0; i < 5; i++)
+// for (int i = 0; i < 5; i++)
+// {
+//     Console.WriteLine("skriv ett nummer ");
+//     string siffra = Console.ReadLine();
+//     int nummer;
+
+//     int.TryParse(siffra, out nummer);
+
+//     if (nummer > 5)
+//     {
+//         Console.WriteLine("större än 5");
+//     }
+// }
+
+bool success = false;
+
+while (!success)
 {
-    Console.WriteLine("skriv ett nummer ");
-    string siffra = Console.ReadLine();
-    int nummer;
+    Console.WriteLine("skriv något, helst en siffra");
+    string skriv = Console.ReadLine();
+    int gababou;
 
-    int.TryParse(siffra, out nummer);
+    success = int.TryParse(skriv, out gababou);
 
-    if (nummer > 5)
-    {
-        Console.WriteLine("större än 5");
-    }
 }
-
 
 
 Console.ReadLine();
