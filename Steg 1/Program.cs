@@ -55,16 +55,47 @@ using System.Reflection.Metadata.Ecma335;
 //     }
 // }
 
-bool success = false;
+// bool success = false;
 
-while (!success)
+// while (!success)
+// {
+//     Console.WriteLine("skriv något, helst en siffra");
+//     string skriv = Console.ReadLine();
+//     int gababou;
+
+//     success = int.TryParse(skriv, out gababou);
+
+// }
+
+int tal;
+int tal2 = 0;
+bool success;
+
+tal = Random.Shared.Next(0, 100);
+
+while (tal2 != tal)
 {
-    Console.WriteLine("skriv något, helst en siffra");
-    string skriv = Console.ReadLine();
-    int gababou;
+    Console.WriteLine("gissa en siffra");
+    string siffra = Console.ReadLine();
 
-    success = int.TryParse(skriv, out gababou);
+    success = int.TryParse(siffra, out tal2);
 
+    if (success)
+    {
+        if (tal2 > tal)
+        {
+            Console.WriteLine("\ntalet är mindre,");
+        } else if (tal2 < tal)
+        {
+            Console.WriteLine("\ntalet är större,");
+        } else if (tal2 == tal)
+        {
+            Console.WriteLine("grattis du vann, är du glad nu eller?");
+        }
+    } else if (!success)
+    {
+        Console.WriteLine("\nsluta larva dig,");
+    }
 }
 
 
