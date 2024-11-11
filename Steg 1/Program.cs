@@ -39,9 +39,20 @@
 // Console.WriteLine("välkommen");
 
 
+using System.Reflection.Metadata.Ecma335;
+
 for (int i = 0; i < 5; i++)
 {
-    
+    Console.WriteLine("skriv ett nummer ");
+    string siffra = Console.ReadLine();
+    int nummer;
+
+    int.TryParse(siffra, out nummer);
+
+    if (nummer > 5)
+    {
+        Console.WriteLine("större än 5");
+    }
 }
 
 
